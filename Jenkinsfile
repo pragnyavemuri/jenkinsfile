@@ -7,10 +7,10 @@ pipeline {
   		 }
 
 	parameters{
-		string(defaultValue: 'test_pipeline', description: '', name: 'ARCH_BRANCH')
-		string(defaultValue: 'develop', description: '', name: 'APPCORE_BRANCH')
-		string(defaultValue: 'develop', description: '', name: 'UIKIT_BRANCH')
-		string(defaultValue: 'feature/GMA-5.x', description: '', name: 'SDK_BRANCH')}
+		string(defaultValue: 'De-develop', description: '', name: 'ARCH_BRANCH')
+		string(defaultValue: 'De-develop', description: '', name: 'APPCORE_BRANCH')
+		string(defaultValue: 'De-develop', description: '', name: 'UIKIT_BRANCH')
+		string(defaultValue: 'De-develop', description: '', name: 'SDK_BRANCH')}
 
 
   stages {
@@ -19,7 +19,7 @@ pipeline {
 
 		steps{
   		checkout([$class: 'GitSCM',
-			  branches: [[name: 'test_pipeline']],
+			  branches: [[name: 'De-develop']],
 			  doGenerateSubmoduleConfigurations: false,
 			  extensions: [[$class: 'SubmoduleOption', disableSubmodules: false, parentCredentials: true, recursiveSubmodules: true, reference: '', timeout: 15, trackingSubmodules: true]],
 			  submoduleCfg: [],
