@@ -23,7 +23,7 @@ pipeline {
 			  doGenerateSubmoduleConfigurations: false,
 			  extensions: [[$class: 'SubmoduleOption', disableSubmodules: false, parentCredentials: true, recursiveSubmodules: true, reference: '', timeout: 15, trackingSubmodules: true]],
 			  submoduleCfg: [],
-			  userRemoteConfigs: [[credentialsId: 'c39b0118-cfc4-4024-ac99-cdf2f69ed733', url: 'ssh://git@coderepository.mcd.com:8443/archus/android.git']]])
+			  userRemoteConfigs: [[credentialsId: 'c39b0118-cfc4-4024-ac99-cdf2f69ed733', url: 'ssh://git@coderepository.mcd.com:8443/gma5_de/android.git']]])
 			}
   		}
 
@@ -62,14 +62,14 @@ pipeline {
         }
 
 
-   stage('Build') {
+  /* stage('Build') {
       steps {
         sh '''
 	  #run build
-	  ./gradlew clean assembleQARelease
+	 # ./gradlew clean assembleQARelease
 	 '''
     }
-    }
+    } */
 
 /*stage('Test') {
       steps {
@@ -78,7 +78,7 @@ pipeline {
     }
 */
 
-    stage('Hockeyapp') {
+ /*   stage('Hockeyapp') {
     	steps {
     			step([$class: 'HockeyappRecorder',
     			applications: [[apiToken: 'd90ccdd12e7440518048400adee5bb23',
@@ -92,7 +92,7 @@ pipeline {
     			failGracefully: false])
     	 	 }
 }
-    }
+    } */
  /*	post {
 
 		success {
