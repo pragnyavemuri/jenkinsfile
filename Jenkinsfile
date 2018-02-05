@@ -7,10 +7,10 @@ pipeline {
   		 }
 
 	parameters{
-		string(defaultValue: 'De-develop', description: '', name: 'ARCH_BRANCH')
-		string(defaultValue: 'De-develop', description: '', name: 'APPCORE_BRANCH')
-		string(defaultValue: 'De-develop', description: '', name: 'UIKIT_BRANCH')
-		string(defaultValue: 'De-develop', description: '', name: 'SDK_BRANCH')}
+		string(defaultValue: 'master', description: '', name: 'ARCH_BRANCH')
+		string(defaultValue: 'master', description: '', name: 'APPCORE_BRANCH')
+		string(defaultValue: 'master', description: '', name: 'UIKIT_BRANCH')
+		string(defaultValue: 'master', description: '', name: 'SDK_BRANCH')}
 
 
   stages {
@@ -23,7 +23,7 @@ pipeline {
 			  doGenerateSubmoduleConfigurations: false,
 			  extensions: [[$class: 'SubmoduleOption', disableSubmodules: false, parentCredentials: true, recursiveSubmodules: true, reference: '', timeout: 15, trackingSubmodules: true]],
 			  submoduleCfg: [],
-			  userRemoteConfigs: [[credentialsId: 'c39b0118-cfc4-4024-ac99-cdf2f69ed733', url: 'ssh://git@coderepository.mcd.com:8443/gma5_de/android.git']]])
+			  userRemoteConfigs: [[credentialsId: 'ef683bd0-363a-4e07-878d-33510fe96fe8', url: 'https://git-codecommit.us-east-2.amazonaws.com/v1/repos/mcdonalds-gma5x-android']]])
 			}
   		}
 
