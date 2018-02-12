@@ -88,7 +88,7 @@ pipeline {
     			releaseNotesMethod: [$class: 'NoReleaseNotes'],
     			uploadMethod: [$class: 'AppCreation', publicPage: false]]],
     			debugMode: false,
-    			failGracefully: false])
+    			failGracefully: false])//
     	 	 }
 }*/
     } 
